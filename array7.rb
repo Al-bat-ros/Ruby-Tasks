@@ -4,7 +4,11 @@
 arr = [5,6,7,1,2,8,9,10]
 #
 # решение №1
-p (0...arr.size).sort_by {|i| arr[i]}.first 2
+puts (0...arr.size).sort_by {|i| arr[i]}.first 2
 
 #
-# 
+# Решение №2  неработает если есть два одинаковых минимума
+v = arr.min(2)
+v.each do |r|
+   puts arr.index(r)
+end
